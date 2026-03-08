@@ -3,8 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Gallery - Benjamin Hoang</title>
-
+  <title>Gallery - Ben Hoang</title>
   <style>
     body {
       font-family: Arial, sans-serif;
@@ -36,16 +35,31 @@
     }
   </style>
 </head>
-
 <body>
   <h1>Photography</h1>
+  <div class="gallery" id="gallery"></div>
 
-  <div class="gallery">
-    <img src="https://hoangben-gallery.s3.us-east-2.amazonaws.com/IMG_2539.jpeg" alt="">
-    <img src="https://hoangben-gallery.s3.us-east-2.amazonaws.com/IMG_2892.jpeg" alt="">
-    <img src="https://hoangben-gallery.s3.us-east-2.amazonaws.com/IMG_2807.jpg" alt="">
-    <img src="https://hoangben-gallery.s3.us-east-2.amazonaws.com/IMG_2600.jpeg" alt="">
-    <img src="https://hoangben-gallery.s3.us-east-2.amazonaws.com/IMG_2584.jpeg" alt="">
-  </div>
+  <script>
+    const images = [
+      "https://hoangben-gallery.s3.us-east-2.amazonaws.com/IMG_2539.jpeg",
+      "https://hoangben-gallery.s3.us-east-2.amazonaws.com/IMG_2892.jpeg",
+      "https://hoangben-gallery.s3.us-east-2.amazonaws.com/IMG_2807.jpg",
+      "https://hoangben-gallery.s3.us-east-2.amazonaws.com/IMG_2600.jpeg",
+      "https://hoangben-gallery.s3.us-east-2.amazonaws.com/IMG_2584.jpeg",
+      "https://hoangben-gallery.s3.us-east-2.amazonaws.com/IMG_0926.jpeg",
+      "https://hoangben-gallery.s3.us-east-2.amazonaws.com/IMG_0416.jpeg",
+      "https://hoangben-gallery.s3.us-east-2.amazonaws.com/IMG_0328.jpg",
+      "https://hoangben-gallery.s3.us-east-2.amazonaws.com/20251108_184937.jpg"
+    ];
+
+    const gallery = document.getElementById("gallery");
+
+    images.forEach(src => {
+      const img = document.createElement("img");
+      img.src = src;
+      img.alt = "Photo by Ben Hoang";
+      gallery.appendChild(img);
+    });
+  </script>
 </body>
 </html>
